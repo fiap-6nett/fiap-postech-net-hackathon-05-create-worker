@@ -1,11 +1,11 @@
-using Contato.Cadastrar.Worker.Application.Interfaces;
-using Contato.Cadastrar.Worker.Infra.Mensageria.Consumer;
+using FastTechFoods.Worker.Application.Interfaces;
+using FastTechFoods.Worker.Infra.Mensageria.Consumer;
 using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using Newtonsoft.Json;
 using System.Text;
-using Contato.Cadastrar.Worker.Application.Dtos;
+using FastTechFoods.Worker.Application.Dtos;
 
 public class ContatoConsumer : IContatoConsumer, IDisposable
 {

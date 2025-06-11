@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Cadastrar.Worker.Domain\Cadastrar.Worker.Domain.csproj" />
+      <ProjectReference Include="..\FastTechFoods.Worker.Domain\FastTechFoods.Worker.Domain.csproj" />
     </ItemGroup>
 
 </Project>

@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Cadastrar.Worker.Application\Cadastrar.Worker.Application.csproj" />
+      <ProjectReference Include="..\FastTechFoods.Worker.Application\FastTechFoods.Worker.Application.csproj" />
     </ItemGroup>
 
 </Project>

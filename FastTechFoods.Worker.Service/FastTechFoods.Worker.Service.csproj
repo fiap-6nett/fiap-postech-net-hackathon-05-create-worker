@@ -13,6 +13,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Cadastrar.Worker.Infra\Cadastrar.Worker.Infra.csproj" />
+      <ProjectReference Include="..\FastTechFoods.Worker.Infra\FastTechFoods.Worker.Infra.csproj" />
     </ItemGroup>
 </Project>

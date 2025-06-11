@@ -46,7 +46,7 @@ IHost host = Host.CreateDefaultBuilder(args)
 
         // Injeção de dependências da aplicação
         services.AddSingleton<IContatoRepository, ContatoRepository>();
-        services.AddSingleton<IContatoAppService, ContatoAppService>();
+        services.AddSingleton<IContatoAppService, OrderAppService>();
         services.AddSingleton<IContatoConsumer, ContatoConsumer>();
 
         // Worker
