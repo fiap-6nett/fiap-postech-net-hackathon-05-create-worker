@@ -1,24 +1,25 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace FastTechFoods.Worker.Domain.Enums;
-
-public enum OrderStatus
+namespace FastTechFoods.Worker.Domain.Enums
 {
-    [Display(Name = "Created")]
-    Created = 0,
+    public enum OrderStatus
+    {
+        [Display(Name = "Created")]
+        Created = 0,
 
-    [Display(Name = "Accepted")]
-    Accepted = 1,
+        [Display(Name = "Cancelled")]
+        Cancelled = 1,
 
-    [Display(Name = "Rejected")]
-    Rejected = 2,
+        [Display(Name = "Accepted")]
+        Accepted = 2,
 
-    [Display(Name = "Cancelled")]
-    Cancelled = 3,
+        [Display(Name = "Rejected")]
+        Rejected = 3,
 
-    [Display(Name = "Finished")]
-    Finished = 4,
+        [Display(Name = "InProgress")]
+        InProgress = 4,
 
-    [Display(Name = "Failed")]
-    Failed = 5
+        [Display(Name = "Finished")]
+        Finished = 5        
+    }
 }

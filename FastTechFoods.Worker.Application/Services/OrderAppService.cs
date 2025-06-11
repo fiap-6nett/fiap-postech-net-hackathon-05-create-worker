@@ -15,7 +15,7 @@ public class OrderAppService : IOrderAppService
         _orderRepository = orderRepository;
     }
     
-    public Task RegisterOrder(OrderPostDto dto)
+    public Task RegisterOrder(OrderDto dto)
     {       
         var order = new Order
         {

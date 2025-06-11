@@ -49,7 +49,7 @@ public class ContatoConsumer : IContatoConsumer, IDisposable
 
             Console.WriteLine($"Mensagem recebida: {message}");
 
-            var dto = JsonConvert.DeserializeObject<CadastrarContatoDto>(message);
+            var dto = JsonConvert.DeserializeObject<OrderDto>(message);
 
             _appService.CadastrarContato(dto);
         };
