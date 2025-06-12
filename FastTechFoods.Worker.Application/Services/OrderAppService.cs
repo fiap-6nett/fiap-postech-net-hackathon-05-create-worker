@@ -22,22 +22,10 @@ public class OrderAppService : IOrderAppService
             IdStore = dto.IdStore,
             IdUser = dto.IdUser,
             Status = OrderStatus.Created,
-            DeliveryType = dto.DeliveryType
+            DeliveryType = dto.DeliveryType,
+            Items = (IEnumerable<Item>)dto.Items
         };
-
-        order.OrderItems.AddRange(
-            dto.OrderItems.Select(item =>
-                new OrderItem(
-                    item
-                    order.Id,
-                    item.MenuItemId,
-                    item.Quantity,
-                    item.Price,
-                    item.Notes
-                )
-            )
-        );
-
+        
         _orderRepository.RegisterOrder(order);
         
         return Task.CompletedTask;
