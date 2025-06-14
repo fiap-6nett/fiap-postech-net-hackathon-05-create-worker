@@ -12,7 +12,7 @@ namespace FastTechFoods.Worker.Infra.Repositories
         public OrderRepository(IMongoClient mongoClient, IOptions<MongoDbSettings> mongoDbSettings)
         {
             var database = mongoClient.GetDatabase(mongoDbSettings.Value.Database);
-            _order = database.GetCollection<Order>("order");
+            _order = database.GetCollection<Order>("Order");
         }
 
         public Order GetById(Guid id)
