@@ -1,9 +1,9 @@
-using Contato.Cadastrar.Worker.Application.Interfaces;
-using Contato.Cadastrar.Worker.Application.Services;
-using Contato.Cadastrar.Worker.Domain.Interfaces;
-using Contato.Cadastrar.Worker.Infra.Mensageria;
-using Contato.Cadastrar.Worker.Infra.Mensageria.Consumer;
-using Contato.Cadastrar.Worker.Infra.Repositories;
+using FastTechFoods.Worker.Application.Interfaces;
+using FastTechFoods.Worker.Application.Services;
+using FastTechFoods.Worker.Domain.Interfaces;
+using FastTechFoods.Worker.Infra.Mensageria;
+using FastTechFoods.Worker.Infra.Mensageria.Consumer;
+using FastTechFoods.Worker.Infra.Repositories;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -45,9 +45,9 @@ IHost host = Host.CreateDefaultBuilder(args)
         });
 
         // Injeção de dependências da aplicação
-        services.AddSingleton<IContatoRepository, ContatoRepository>();
-        services.AddSingleton<IContatoAppService, OrderAppService>();
-        services.AddSingleton<IContatoConsumer, ContatoConsumer>();
+        services.AddSingleton<IOrderRepository, OrderRepository>();
+        services.AddSingleton<IOrderAppService, OrderAppService>();
+        services.AddSingleton<IConsumer, Consumer>();
 
         // Worker
         services.AddHostedService<Worker>();

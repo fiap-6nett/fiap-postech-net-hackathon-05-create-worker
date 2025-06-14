@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FastTechFoods.Worker.Application.Dtos;
 
+#nullable disable
 public class OrderDto
 {
     public Guid Id { get; set; }
@@ -23,3 +24,4 @@ public class OrderDto
     [Required(ErrorMessage = "Items is required")]
     public IEnumerable<ItemDto> Items { get; set; }    
 }
+#nullable restore

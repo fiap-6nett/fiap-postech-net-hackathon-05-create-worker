@@ -2,6 +2,7 @@ using FastTechFoods.Worker.Domain.Enums;
 
 namespace FastTechFoods.Worker.Domain.Entities;
 
+#nullable disable
 public class Order : Base
 {
     public Guid IdStore { get; set; }
@@ -10,3 +11,4 @@ public class Order : Base
     public DeliveryType DeliveryType { get; set; }
     public IEnumerable<Item> Items { get; set; }            
 }
+#nullable restore

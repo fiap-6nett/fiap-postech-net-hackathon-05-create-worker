@@ -1,11 +1,11 @@
-using Contato.Cadastrar.Worker.Infra.Mensageria.Consumer;
+using FastTechFoods.Worker.Infra.Mensageria.Consumer;
 
 public class Worker : BackgroundService
 {
     private readonly ILogger<Worker> _logger;
-    private readonly IContatoConsumer _consumer;
+    private readonly IConsumer _consumer;
 
-    public Worker(ILogger<Worker> logger, IContatoConsumer consumer)
+    public Worker(ILogger<Worker> logger, IConsumer consumer)
     {
         _logger = logger;
         _consumer = consumer;

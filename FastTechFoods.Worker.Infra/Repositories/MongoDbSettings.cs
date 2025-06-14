@@ -1,7 +1,8 @@
-namespace Contato.Cadastrar.Worker.Infra.Repositories;
-
-public class MongoDbSettings
+namespace FastTechFoods.Worker.Infra.Repositories
 {
-    public string ConnectionString { get; set; }
-    public string Database { get; set; }
+    public class MongoDbSettings
+    {
+        public string ConnectionString { get; set; }
+        public string Database { get; set; }
+    }
 }
