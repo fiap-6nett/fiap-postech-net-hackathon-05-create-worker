@@ -16,15 +16,24 @@ public class OrderAppService : IOrderAppService
     }
     
     public Task RegisterOrder(OrderDto dto)
-    {       
+    {
         var order = new Order
         {
             IdStore = dto.IdStore,
             IdUser = dto.IdUser,
             Status = OrderStatus.Created,
             DeliveryType = dto.DeliveryType,
-            Items = (IEnumerable<Item>)dto.Items
-        };
+            Items = dto.Items.Select(i => new Item(
+                        id: i.Id,
+                        menuItemId: i.MenuItemId,
+                        name: i.Name,
+                        description: i.Description,
+                        price: i.Price,
+                        amount: i.Amount,
+                        category: i.Category,
+                        notes: i.Notes)
+            )
+        };    
         
         _orderRepository.RegisterOrder(order);
         

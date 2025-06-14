@@ -14,5 +14,19 @@ public class Item
     public Category Category { get; set; }
     public string Notes { get; set; }
 
+    public Item(Guid id, Guid menuItemId, string name, string description, decimal price, decimal amount, Category category, string notes)
+    {        
+        Id = id;
+        MenuItemId = menuItemId;
+        Name = name;
+        Description = description;
+        Price = price;
+        Amount = amount;
+        Category = category;
+        Notes = notes;
+    }
+
+    public Item() { }
+
 }
 #nullable restore
