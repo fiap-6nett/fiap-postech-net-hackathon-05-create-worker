@@ -23,5 +23,6 @@ public class OrderDto
     
     [Required(ErrorMessage = "Items is required")]
     public IEnumerable<ItemDto> Items { get; set; }    
+    public string Justification { get; set; }    
 }
 #nullable restore

@@ -32,7 +32,8 @@ public class OrderAppService : IOrderAppService
                         amount: i.Amount,
                         category: i.Category,
                         notes: i.Notes)
-            )
+            ),
+            Justification = dto.Justification
         };    
         
         _orderRepository.RegisterOrder(order);
