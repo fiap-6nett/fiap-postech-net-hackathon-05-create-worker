@@ -29,9 +29,9 @@ namespace FastTechFoods.Worker.Infra.Repositories
                 var filterId = Builders<Order>.Filter.Eq(c => c.Id, order.Id);
 
                 // Realizando a busca no banco
-                var existingContato_id = _order.Find(filterId).FirstOrDefault();
+                var existing_id = _order.Find(filterId).FirstOrDefault();
 
-                if (existingContato_id == null)
+                if (existing_id == null)
                 {
                     _order.InsertOneAsync(order);
                 }
@@ -39,7 +39,7 @@ namespace FastTechFoods.Worker.Infra.Repositories
             }
             catch (Exception ex)
             {
-                throw new Exception($"Falha ao inserir o contato. Erro {ex.Message}");
+                throw new Exception($"Falha ao inserir o pedido. Erro {ex.Message}");
             }
 
         }
