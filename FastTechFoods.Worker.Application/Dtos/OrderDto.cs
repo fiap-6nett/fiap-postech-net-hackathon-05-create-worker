@@ -8,6 +8,7 @@ namespace FastTechFoods.Worker.Application.Dtos;
 public class OrderDto
 {
     public Guid Id { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     [Required(ErrorMessage = "Id Store is required")]
     public Guid IdStore { get; set; }

@@ -19,6 +19,7 @@ public class OrderAppService : IOrderAppService
     {
         var order = new Order
         {
+            CreatedAt = dto.CreatedAt,
             IdStore = dto.IdStore,
             IdUser = dto.IdUser,
             Status = OrderStatus.Created,
