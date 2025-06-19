@@ -23,7 +23,7 @@ namespace FastTechFoods.Worker.Infra.Mensageria.Consumer
             _connection = rabbitConnection;
             _channel = _connection.CreateModel();
 
-            _queueName = configuration["RabbitMQ:QueueName"] ?? "orders-fast-tech";
+            _queueName = configuration["RabbitMQ:QueueName"] ?? "orders-create-fast-tech";
 
             _channel.QueueDeclare(
                 queue: _queueName,
