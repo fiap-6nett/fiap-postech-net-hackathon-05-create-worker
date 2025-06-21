@@ -9,22 +9,22 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copia o arquivo da solução
-COPY Contato.Cadastrar.Worker.sln .
+COPY FastTechFoods.Worker.sln .
 
 # Copia os arquivos dos projetos
-COPY Contato.Cadastrar.Worker.Service/Contato.Cadastrar.Worker.Service.csproj Contato.Cadastrar.Worker.Service/
-COPY Contato.Cadastrar.Worker.Application/Contato.Cadastrar.Worker.Application.csproj Contato.Cadastrar.Worker.Application/
-COPY Contato.Cadastrar.Worker.Domain/Contato.Cadastrar.Worker.Domain.csproj Contato.Cadastrar.Worker.Domain/
-COPY Contato.Cadastrar.Worker.Infra/Contato.Cadastrar.Worker.Infra.csproj Contato.Cadastrar.Worker.Infra/
+COPY FastTechFoods.Worker.Service/FastTechFoods.Worker.Service.csproj FastTechFoods.Worker.Service/
+COPY FastTechFoods.Worker.Application/FastTechFoods.Worker.Application.csproj FastTechFoods.Worker.Application/
+COPY FastTechFoods.Worker.Domain/FastTechFoods.Worker.Domain.csproj FastTechFoods.Worker.Domain/
+COPY FastTechFoods.Worker.Infra/FastTechFoods.Worker.Infra.csproj FastTechFoods.Worker.Infra/
 
 # Restaura os pacotes NuGet
-RUN dotnet restore Contato.Cadastrar.Worker.sln
+RUN dotnet restore FastTechFoods.Worker.sln
 
 # Copia o restante dos arquivos
 COPY . .
 
 # Compila o projeto
-WORKDIR /src/Contato.Cadastrar.Worker.Service
+WORKDIR /src/FastTechFoods.Worker.Service
 RUN dotnet build -c $BUILD_CONFIGURATION -o /app/build
 
 # Publica a aplicação
@@ -37,4 +37,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-ENTRYPOINT ["dotnet", "Contato.Cadastrar.Worker.Service.dll"]
+ENTRYPOINT ["dotnet", "FastTechFoods.Worker.Service.dll"]
